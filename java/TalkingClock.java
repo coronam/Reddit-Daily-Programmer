@@ -39,9 +39,9 @@ class TalkingClock{
         String[] hours = {"twelve", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"};
         if( hour >= 12){
             hour = hour - 12;
-            return "It's " + hours[hour] + " " + Minutes(minute) + " pm";
+            return "It's " + hours[hour] + Minutes(minute) + " pm";
         }else{
-            return "It's " + hours[hour] + " " + Minutes(minute) + " am";
+            return "It's " + hours[hour] + Minutes(minute) + " am";
         }
     }
 
@@ -52,15 +52,15 @@ class TalkingClock{
         if(m == 00){
             return "";
         }if(m < 10){
-            return "oh " + digits[m];
+            return " oh " + digits[m];
         }if(m < 20){
-            return teens[m%10];
+            return " " + teens[m%10];
         }else{
             String minutes = tens[m /10];
             if( (m%10) != 0){
                 minutes = minutes + " " + digits[m%10];
             }
-            return minutes;
+            return " " + minutes;
         }
     }
 
